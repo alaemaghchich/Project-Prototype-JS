@@ -8,16 +8,12 @@ const items = [
     { q: "best game", a: "freefire" },
     { q: "who is alae maghchich", a: "the king" }
   ];
-  
   let correct=0, wrong=0;
   alert;
-  
   while (true) {
     let item = items[Math.floor(Math.random() * items.length)];
     let ans = prompt( item.q);
-  
     if (!ans || ans.toUpperCase() === "EXIT") break;
-  
     if (ans.trim().toUpperCase() === item.a.toUpperCase()) {
       correct++; alert(" Correct!");
     } else {
@@ -25,4 +21,3 @@ const items = [
     }
   }
   console.log(" Game Over!\ntrue " + correct + " | false " + wrong);
-  

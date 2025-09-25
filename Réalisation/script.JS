@@ -7,17 +7,20 @@ const items = [
     { q: "world strongest man 2017", a: "eddie hall" },
     { q: "best game", a: "freefire" },
     { q: "who is alae maghchich", a: "the king" }
-  ];
-  let correct=0, wrong=0;
-  alert;
-  while (true) {
-    let item = items[Math.floor(Math.random() * items.length)];
-    let ans = prompt( item.q);
-    if (!ans || ans.toUpperCase() === "EXIT") break;
-    if (ans.trim().toUpperCase() === item.a.toUpperCase()) {
-      correct++; alert(" Correct!");
+];
+
+let correct = 0;
+let wrong = 0;
+for (let i = 0; i < items.length; i++) {
+    let free = prompt(items[i].q);
+     if (free == items[i].a) {
+        correct++;
+        alert("Correct!");
     } else {
-      wrong++; alert(" Wrong! Correct: " + item.a);
+        wrong++;
+        alert("Wrong! Correct answer: " + items[i].a);
     }
-  }
-  console.log(" Game Over!\ntrue " + correct + " | false " + wrong);
+}
+console.log("Game Over!\nCorrect: " + correct + " | Wrong: " + wrong);
+
+
